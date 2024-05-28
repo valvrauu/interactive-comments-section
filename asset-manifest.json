@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/interactive-comments-section/static/css/main.2dc8c4be.css",
+    "main.js": "/interactive-comments-section/static/js/main.13815b58.js",
+    "index.html": "/interactive-comments-section/index.html",
+    "main.2dc8c4be.css.map": "/interactive-comments-section/static/css/main.2dc8c4be.css.map",
+    "main.13815b58.js.map": "/interactive-comments-section/static/js/main.13815b58.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2dc8c4be.css",
+    "static/js/main.13815b58.js"
+  ]
+}
