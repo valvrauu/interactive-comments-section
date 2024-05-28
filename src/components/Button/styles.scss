@@ -35,6 +35,7 @@
 
     &.t-like {
         color: get($colors, "primary", "200");
+        background: get($colors, "neutral", "200");
 
         & svg {
             color: get($colors, "primary", "100");
