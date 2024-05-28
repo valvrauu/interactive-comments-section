@@ -1,0 +1,41 @@
+@use '../../styles/scss/abstracts/index' as *;
+
+.c-add-comment {
+    border-radius: .8rem;
+    padding: 2.4rem;
+
+    background: get($colors, "neutral", "100");
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+
+        @include mq("md") {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        & .c-textarea {
+            flex: 1;
+            height: 9.6rem
+        }
+
+        & .c-picture {
+            order: -1;
+            width: 4rem;
+        }
+
+        & .c-btn {
+            flex-basis: 10.4rem
+        }
+    }
+
+    &__details {
+        @include flex(center, space-between);
+
+        @include mq("md") {
+            display: contents;
+        }
+    }
+}
