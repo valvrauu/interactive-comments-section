@@ -1,0 +1,6 @@
+@use '../../styles/scss/abstracts/index' as *;
+
+.c-heading {
+    color: get($colors, "neutral", "500");
+    @extend %heading;
+}

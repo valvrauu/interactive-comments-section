@@ -1,0 +1,19 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as *;
+@use '../abstracts/functions' as *;
+
+body {
+    @include flex(center);
+
+    padding: 3.2rem 1.6rem;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    color: get($colors, "neutral", "400");
+    background: get($colors, "neutral", "200");
+}
+
+main {
+    display: grid;
+    gap: 2rem;
+}

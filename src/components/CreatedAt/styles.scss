@@ -1,0 +1,5 @@
+@use '../../styles/scss/abstracts/index' as *;
+
+.c-create-at {
+    color: get($colors, "neutral", "400");
+}

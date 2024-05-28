@@ -1,0 +1,93 @@
+@use '../../styles/scss/abstracts/index' as *;
+
+.c-btn {
+    @include flex(center);
+    gap: .8rem;
+
+    border: none;
+    border-radius: 1rem;
+
+    color: get($colors, "neutral", "100");
+
+    font-weight: get($fonts, "weight", "medium");
+    line-height: get($fonts, "leading", "normal");
+
+    cursor: pointer;
+    transition: color 250ms, background-color 250ms;
+
+    &.t-light {
+        color: get($colors, "primary", "200");
+        background: get($colors, "neutral", "200");
+
+        &:hover {
+            color: get($colors, "primary", "100");
+        }
+    }
+
+    &.t-dark {
+        color: get($colors, "neutral", "100");
+        background: get($colors, "primary", "200");
+
+        &:hover {
+            background: get($colors, "primary", "100");
+        }
+    }
+
+    &.t-like {
+        color: get($colors, "primary", "200");
+
+        & svg {
+            color: get($colors, "primary", "100");
+
+            &:hover {
+                color: get($colors, "primary", "200");
+            }
+        }
+    }
+
+    &.t-cancel {
+        background: get($colors, "neutral", "400");
+
+        &:hover {
+            background: get($colors, "neutral", "400");
+        }
+    }
+
+    &.t-delete {
+        color: get($colors, "secondary", "200");
+
+        &:hover {
+            color: get($colors, "secondary", "100");
+        }
+    }
+
+    &.t-delete-reverse {
+        background: get($colors, "secondary", "200");
+        
+        &:hover {
+            background: get($colors, "secondary", "100");
+        }
+    }
+
+    &.s-like {
+        line-height: initial;
+        cursor: initial;
+
+        & svg {
+            cursor: pointer;
+            transition: inherit;
+        }
+    }
+
+    &:not(&--contained) {
+        background: transparent;
+    }
+
+    &--big {
+        padding: 1.2rem;
+    }
+
+    &--upper {
+        text-transform: uppercase;
+    }
+}

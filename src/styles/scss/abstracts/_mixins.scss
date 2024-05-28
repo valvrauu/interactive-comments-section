@@ -1,0 +1,24 @@
+@use 'breakpoints' as *;
+
+@mixin mq($name) {
+    @if map-has-key($breakpoints, $name) {
+        @media #{inspect(map-get($breakpoints, $name))} {
+            @content;
+        }
+    }
+
+    @else {
+        @error '`#{$name} is not a key in breakpoints`';
+    }
+}
+
+@mixin flex($main, $cross: null) {
+    display: flex;
+    align-items: $main;
+
+    @if not $cross {
+        justify-content: $main;
+    } @else {
+        justify-content: $cross;
+    }
+}

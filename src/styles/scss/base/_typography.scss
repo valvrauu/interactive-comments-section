@@ -1,0 +1,13 @@
+@use '../abstracts/fonts' as *;
+@use '../abstracts/functions' as *;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: get($fonts, "size", "sm");
+    font-family: get($fonts, "family", "primary");
+    font-weight: get($fonts, "weight", "regular");
+    line-height: get($fonts, "leading", "normal");
+}
