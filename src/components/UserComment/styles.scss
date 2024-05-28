@@ -1,0 +1,78 @@
+@use '../../styles/scss/abstracts/index' as *;
+
+.c-user-comment {
+    display: grid;
+    gap: 1.6rem;
+
+    padding: 1.6rem;
+    border-radius: .8rem;
+
+    background: get($colors, "neutral", "100");
+
+    @include mq("md") {
+        grid-template-columns: auto 1fr auto;
+
+        gap: 1.5rem 2.4rem;
+        padding: 2.4rem;
+    }
+
+    &__header {
+        @include flex(center, flex-start);
+        gap: 1.6rem;
+    }
+
+    &__user-details {
+        @include flex(center);
+        gap: .8rem;
+    }
+
+    &__form,
+    &__text {
+        grid-area: 2 / 2 / 3 / -1;
+    }
+
+    &__form {
+        @include mq("md") {
+            display: grid;
+            grid-template-columns: auto 10.4rem;
+            gap: 1.6rem;
+
+        }
+    }
+
+    &__actions {
+        @include flex(space-between);
+
+        @include mq("md") {
+            display: contents;
+        }
+    }
+
+    &__actions-end {
+        @include flex(center);
+        gap: 1.6rem;
+
+        @include mq("md") {
+            gap: 2.4rem;
+        }
+    }
+
+    &__likeBtn {
+        @include flex(space-evenly);
+        flex-basis: 10rem;
+
+        @include mq("md") {
+            flex-direction: column;
+            grid-area: 1 / 1 / 3 / 2;
+            height: 10rem;
+        }
+    }
+
+    &__updateBtn {
+        grid-column: 2 / -1;
+    }
+
+    &__textarea {
+        grid-column: 1 / -1;
+    }
+}
