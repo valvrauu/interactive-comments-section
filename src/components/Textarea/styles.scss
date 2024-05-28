@@ -1,0 +1,22 @@
+@use '../../styles/scss/abstracts/index' as *;
+
+.c-textarea {
+    border: 1px solid get($colors, "neutral", "300");
+    border-radius: .8rem;
+    padding: 1.2rem 2.4rem;
+
+    caret-color: get($colors, "primary", "200");
+    color: get($colors, "neutral", "500");
+
+    resize: none;
+    overflow: hidden;
+
+    &::placeholder {
+        color: get($colors, "neutral", "400");
+    }
+
+    &:focus {
+        border: 1px solid get($colors, "primary", "200");
+        outline: none;
+    }
+}
