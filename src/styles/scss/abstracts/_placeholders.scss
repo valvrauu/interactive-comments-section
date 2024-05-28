@@ -1,0 +1,7 @@
+@use './fonts' as *;
+@use './functions' as *;
+
+%heading {
+    font-weight: get($fonts, "weight", "medium");
+    line-height: initial;
+}
