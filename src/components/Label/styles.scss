@@ -1,0 +1,12 @@
+@use '../../styles/scss/abstracts/index' as *;
+
+.c-label {
+    padding: .1rem .65rem .3rem;
+    border-radius: 2px;
+
+    color: get($colors, "neutral", "100");
+    background: get($colors, "primary", "200");
+
+    font-size: get($fonts, "size", "xsm");
+    @extend %heading;
+}
