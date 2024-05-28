@@ -1,0 +1,6 @@
+@use '../../styles/scss/abstracts/index' as *;
+
+.c-reply-to {
+    color: get($colors, "primary", "200");
+    font-weight: get($fonts, "weight", "medium");
+}
