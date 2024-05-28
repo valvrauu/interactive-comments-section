@@ -1,0 +1,21 @@
+@use '../../styles/scss/abstracts/index' as *;
+
+.c-box-comment {
+    display: grid;
+    gap: 2rem;
+
+    max-width: 73rem;
+
+    &__replies {
+        display: grid;
+        gap: 2.4rem;
+
+        border-left: 2px solid get($colors, "neutral", "300");
+        padding-left: 1.6rem;
+
+        @include mq("md") {
+            margin-left: 4.3rem;
+            padding-left: 4.3rem;
+        }
+    }
+}
