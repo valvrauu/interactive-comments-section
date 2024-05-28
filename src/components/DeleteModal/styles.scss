@@ -1,0 +1,41 @@
+@use '../../styles/scss/abstracts/index' as *;
+
+.c-modal-overlay {
+    @include flex(center);
+    padding: 1.6rem;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(get($colors, "neutral", "900"), .5);
+
+    &--hidden {
+        display: none;
+    }
+}
+
+.c-delete-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    padding: 2.4rem 2.8rem;
+    max-width: 40rem;
+    border-radius: .8rem;
+
+    background: get($colors, "neutral", "100");
+
+    &__actions {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+    &__heading {
+        font-size: get($fonts, "size", "md");
+
+        @include mq("md") {
+            font-size: get($fonts, "size", "lg");
+        }
+    }
+}
