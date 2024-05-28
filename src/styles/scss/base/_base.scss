@@ -11,6 +11,10 @@ body {
 
     color: get($colors, "neutral", "400");
     background: get($colors, "neutral", "200");
+
+    @include mq("md") {
+        padding: 6.4rem;
+    }
 }
 
 main {
