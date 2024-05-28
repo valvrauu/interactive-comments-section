@@ -8,7 +8,7 @@ function Textarea({ mixName, ...props }) {
     const adjustTextareaHeight = () => {
         const textarea = textareaRef.current;
         if (textarea) {
-            textarea.style.height = 'auto';
+            textarea.style.height = '96px';
             textarea.style.height = `${textarea.scrollHeight}px`;
         }
     };
